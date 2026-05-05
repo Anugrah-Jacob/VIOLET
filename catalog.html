@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Catalogue & Pricing | VIOLET Mavelikara</title>
+    <meta name="description" content="Explore our full range of beauty services and transparent pricing. From bridal packages to advanced hair treatments, discover excellence at VIOLET.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    
+    
+    
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    
+    
+    
+    
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: "#532161", // Imperial Purple
+                            secondary: "#E5D1E5", // Queen Pink
+                            accent: "#FDF2F8", // Blush Pink Tint
+                            bg: "#FFFBFE", // Warm White
+                        },
+                    },
+                    fontFamily: {
+                        sans: ["Montserrat", "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+
+
+
+
+
+
+    <style>
+        .service-item:hover { background: #FDF2F8; }
+        .tab-active { border-bottom: 2px solid #532161; color: #532161; font-weight: 700; }
+        .tab-inactive { border-bottom: 2px solid transparent; color: #94a3b8; font-weight: 400; }
+    </style>
+
+    <style>
+        .lucide { width: 1.25rem; height: 1.25rem; color: currentColor; vertical-align: middle; }
+        #mobile-menu-btn .lucide, #close-menu-btn .lucide { width: 1.5rem; height: 1.5rem; }
+        .mobile-nav-link .lucide { width: 1.25rem; height: 1.25rem; opacity: 0.8; }
+    </style>
+
+    <style>
+        /* Global icon styling */
+        .lucide { width: 1.25rem; height: 1.25rem; color: currentColor; vertical-align: middle; }
+        #mobile-menu-btn .lucide, #close-menu-btn .lucide { width: 1.5rem; height: 1.5rem; }
+        .mobile-nav-link .lucide { width: 1.25rem; height: 1.25rem; opacity: 0.8; }
+    </style>
+</head>
+<body class="font-sans bg-brand-bg text-slate-800 antialiased selection:bg-brand-secondary selection:text-brand-primary flex flex-col min-h-screen">
+
+    
+    
+    
+    
+    
+    
+    <!-- Navigation -->
+    <header class="z-50 relative">
+        <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-6 py-4 bg-brand-bg/90 backdrop-blur-md border-b border-brand-secondary/30">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <div class="relative overflow-hidden rounded-lg">
+                        <img src="assets/Logo.png" alt="VIOLET Logo" class="h-10 w-auto transition-transform group-hover:scale-110">
+                    </div>
+                    <span class="text-2xl font-bold tracking-tighter text-brand-primary lowercase">violet</span>
+                </a>
+                
+                <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide text-slate-600 uppercase">
+                    <a href="index.html" class="nav-link hover:text-brand-primary transition-colors">Home</a>
+                    <a href="services.html" class="nav-link hover:text-brand-primary transition-colors">Services</a>
+                    <a href="catalog.html" class="nav-link hover:text-brand-primary transition-colors">Catalogue</a>
+                    <a href="about.html" class="nav-link hover:text-brand-primary transition-colors">About</a>
+                    <a href="gallery.html" class="nav-link hover:text-brand-primary transition-colors">Gallery</a>
+                    <a href="contact.html" class="nav-link hover:text-brand-primary transition-colors">Contact</a>
+                </div>
+
+                <div class="hidden md:block">
+                    <a href="https://wa.me/919847485975?text=I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="bg-brand-primary text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-brand-primary/90 transition-all shadow-lg shadow-brand-primary/20 flex items-center gap-2">
+                        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        Book Now
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Open Menu" class="md:hidden text-brand-primary p-2 focus:outline-none hover:bg-brand-secondary/20 rounded-lg transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu Backdrop -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-brand-primary/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col shadow-2xl">
+            <div class="p-6 border-b border-brand-secondary/20 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <img src="assets/Logo.png" alt="VIOLET Logo" class="h-8 w-auto">
+                    <span class="text-xl font-bold tracking-tighter text-brand-primary lowercase">violet</span>
+                </div>
+                <button id="close-menu-btn" aria-label="Close Menu" class="text-brand-primary p-2 hover:bg-brand-secondary/20 rounded-lg transition-colors">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            
+            <div class="flex-1 overflow-y-auto py-8 px-6">
+                <div class="flex flex-col gap-1">
+                    <a href="index.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="home" class="w-5 h-5"></i> Home
+                    </a>
+                    <a href="services.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i> Services
+                    </a>
+                    <a href="catalog.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="book-open" class="w-5 h-5"></i> Catalogue
+                    </a>
+                    <a href="about.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="info" class="w-5 h-5"></i> About
+                    </a>
+                    <a href="gallery.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="image" class="w-5 h-5"></i> Gallery
+                    </a>
+                    <a href="contact.html" class="mobile-nav-link flex items-center gap-4 py-4 px-4 rounded-xl text-brand-primary font-semibold hover:bg-brand-secondary/10 transition-colors">
+                        <i data-lucide="phone" class="w-5 h-5"></i> Contact
+                    </a>
+                </div>
+            </div>
+
+            <div class="p-6 border-t border-brand-secondary/20 bg-brand-bg/50">
+                <a href="https://wa.me/919847485975?text=I%20would%20like%20to%20book%20an%20appointment" target="_blank" class="flex items-center justify-center gap-3 bg-brand-primary text-white w-full py-4 rounded-2xl font-bold tracking-wide shadow-lg shadow-brand-primary/20 active:scale-[0.98] transition-transform">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    BOOK APPOINTMENT
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <main class="pt-24 bg-brand-bg flex-1">
+        
+        <!-- Header -->
+        <section class="py-16 md:py-24 text-center px-6 border-b border-brand-secondary/30 relative overflow-hidden bg-white">
+            <div class="max-w-3xl mx-auto relative z-10">
+                <h4 class="text-brand-primary/60 font-bold uppercase tracking-[0.2em] text-sm mb-4">Investment in Yourself</h4>
+                <h1 class="text-5xl md:text-6xl font-extrabold text-brand-primary mb-6 tracking-tight">Service Catalogue</h1>
+                <div class="w-16 h-1 bg-brand-secondary mx-auto mb-8"></div>
+                <p class="text-slate-600 text-lg max-w-2xl mx-auto leading-relaxed">Explore our full range of premium beauty services and transparent pricing. Experience excellence at every step.</p>
+            </div>
+            <!-- Decorative Elements -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2"></div>
+        </section>
+
+        <div class="max-w-4xl mx-auto px-6 py-12">
+            
+            <!-- Category Tabs -->
+            <div class="flex overflow-x-auto gap-8 border-b border-brand-secondary/30 mb-12 no-scrollbar pb-1">
+                <button onclick="showCategory('hair')" class="category-tab tab-active pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors" id="tab-hair">Hair Care</button>
+                <button onclick="showCategory('skin')" class="category-tab tab-inactive pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors hover:text-brand-primary" id="tab-skin">Skin Care</button>
+                <button onclick="showCategory('nails')" class="category-tab tab-inactive pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors hover:text-brand-primary" id="tab-nails">Nails & Spa</button>
+                <button onclick="showCategory('facial')" class="category-tab tab-inactive pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors hover:text-brand-primary" id="tab-facial">Facials</button>
+                <button onclick="showCategory('bridal')" class="category-tab tab-inactive pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors hover:text-brand-primary" id="tab-bridal">Bridal & Party</button>
+                <button onclick="showCategory('packages')" class="category-tab tab-inactive pb-4 text-sm uppercase tracking-widest whitespace-nowrap transition-colors hover:text-brand-primary" id="tab-packages">Special Packages</button>
+            </div>
+
+            <!-- Hair Care -->
+            <div id="cat-hair" class="category-content space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Hair Cut & Styling</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10"><span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Men</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Haircut</span><span class="font-bold text-brand-primary">₹150</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hair Wash</span><span class="font-bold text-brand-primary">₹130</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Beard</span><span class="font-bold text-brand-primary">₹50</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Advanced Cut</span><span class="font-bold text-brand-primary">₹700</span></div>
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10"><span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Women</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hair Cut</span><span class="font-bold text-brand-primary">₹700</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hair Trimming</span><span class="font-bold text-brand-primary">₹350</span></div>
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10"><span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Kids</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Baby Haircut (Short Hair)</span><span class="font-bold text-brand-primary">₹250</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Girls Haircut</span><span class="font-bold text-brand-primary">₹350</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Bob Haircut</span><span class="font-bold text-brand-primary">₹500</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Hair Treatments</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10 flex-col sm:flex-row gap-2">
+                                <span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Service</span>
+                                <div class="flex gap-10"><span class="text-[10px] uppercase font-bold text-brand-primary/60">Men</span><span class="text-[10px] uppercase font-bold text-brand-primary/60">Women</span></div>
+                            </div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Smoothening</span><div class="flex gap-8"><span class="text-brand-primary/80">₹2500</span><span class="font-bold text-brand-primary">₹4500+</span></div></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Keratin</span><div class="flex gap-8"><span class="text-brand-primary/80">₹4000</span><span class="font-bold text-brand-primary">₹8000+</span></div></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hair Botox</span><div class="flex gap-8"><span class="text-brand-primary/80">₹4000</span><span class="font-bold text-brand-primary">₹8000+</span></div></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Nano Plastia</span><div class="flex gap-8"><span class="text-brand-primary/80">₹4500</span><span class="font-bold text-brand-primary">₹8500+</span></div></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Regular Spa</span><div class="flex gap-8"><span class="text-brand-primary/80">₹1000</span><span class="font-bold text-brand-primary">₹1250</span></div></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Olamine Spa (Dandruff)</span><div class="flex gap-8"><span class="text-brand-primary/80">₹1250</span><span class="font-bold text-brand-primary">₹1500</span></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skin Care -->
+            <div id="cat-skin" class="category-content hidden space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Threading & Waxing</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10"><span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Threading</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Eyebrow</span><span class="font-bold text-brand-primary">₹30</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Upper/Lower Lip</span><span class="font-bold text-brand-primary">₹50</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Side Face</span><span class="font-bold text-brand-primary">₹100</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Face</span><span class="font-bold text-brand-primary">₹150</span></div>
+                            <div class="p-5 flex justify-between items-center bg-brand-secondary/10"><span class="font-bold text-xs uppercase tracking-widest text-brand-primary">Waxing</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Underarms</span><span class="font-bold text-brand-primary">₹300</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Half Hand</span><span class="font-bold text-brand-primary">₹500</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Hand</span><span class="font-bold text-brand-primary">₹700</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Leg</span><span class="font-bold text-brand-primary">₹1250</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Body</span><span class="font-bold text-brand-primary">₹4500</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nails & Spa -->
+            <div id="cat-nails" class="category-content hidden space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Nail Art & Extensions</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Gel Extension with Normal Polish (1 Hand)</span><span class="font-bold text-brand-primary">₹1500</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Soft Gel Extensions</span><span class="font-bold text-brand-primary">₹2000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Gel Polish (2 Hands)</span><span class="font-bold text-brand-primary">₹2000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Acrylic Extension</span><span class="font-bold text-brand-primary">₹4000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Art/Nail</span><span class="font-bold text-brand-primary">₹150</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Extension Removing (Per Hand)</span><span class="font-bold text-brand-primary">₹500</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Body Spa & Polish</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Spa Manicure</span><span class="font-bold text-brand-primary">₹850</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Crystal Spa Manicure</span><span class="font-bold text-brand-primary">₹1000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Pedicure</span><span class="font-bold text-brand-primary">₹750</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Body Polish</span><span class="font-bold text-brand-primary">₹6000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Full Body Spa</span><span class="font-bold text-brand-primary">₹3000</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Facials -->
+            <div id="cat-facial" class="category-content hidden space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Facials</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Korean Glass Skin</span><span class="font-bold text-brand-primary">₹3800</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hydra Facial</span><span class="font-bold text-brand-primary">₹4000-6000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Vitamin C and Plant Retinol</span><span class="font-bold text-brand-primary">₹3500</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Alpha Arbutin Melanin Control</span><span class="font-bold text-brand-primary">₹2500</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Niacinamide and AHA Skin Lightening</span><span class="font-bold text-brand-primary">₹3000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Advanced Enzyme Facial</span><span class="font-bold text-brand-primary">₹3000</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Gold Age Reviving (Metallic)</span><span class="font-bold text-brand-primary">₹2250</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bridal & Party -->
+            <div id="cat-bridal" class="category-content hidden space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Bridal Packages</h3>
+                    <div class="bg-white rounded-3xl p-10 shadow-xl border border-brand-secondary/20 text-center relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-secondary/20 rounded-full mix-blend-multiply filter blur-3xl opacity-70"></div>
+                        <i data-lucide="quote" class="w-10 h-10 text-brand-secondary mx-auto mb-6"></i>
+                        <p class="text-brand-primary/80 mb-8 font-medium text-2xl tracking-tight">"Shalima understood exactly what I wanted — a natural yet elegant look... the makeup was flawless." - Teena Mathew</p>
+                        <p class="text-slate-600 mb-10 leading-relaxed font-light">Our bridal services are highly personalized. We offer HD Makeup, Airbrush, Traditional Kerala Bridal, and Saree Draping. Packages are tailored to your skin type, theme, and requirements.</p>
+                        <a href="https://wa.me/919847485975?text=I%20would%20like%20to%20enquire%20about%20bridal%20packages" target="_blank" class="inline-block bg-brand-primary text-white px-10 py-4 rounded-full font-bold uppercase tracking-[0.2em] text-sm hover:bg-brand-primary/90 transition-all shadow-xl shadow-brand-primary/20">Contact for Details</a>
+                    </div>
+                </div>
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Party & Occasion</h3>
+                    <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-brand-secondary/20">
+                        <div class="divide-y divide-brand-secondary/20">
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Party Makeup (Natural)</span><span class="font-bold text-brand-primary/60 uppercase tracking-widest text-xs">Enquire</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Saree Draping</span><span class="font-bold text-brand-primary/60 uppercase tracking-widest text-xs">Enquire</span></div>
+                            <div class="p-5 flex justify-between items-center service-item transition-colors"><span class="font-light">Hair Styling / Updo</span><span class="font-bold text-brand-primary/60 uppercase tracking-widest text-xs">Enquire</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Packages -->
+            <div id="cat-packages" class="category-content hidden space-y-12">
+                <div>
+                <h3 class="text-3xl font-extrabold text-brand-primary mb-6 border-l-4 border-brand-secondary pl-4 tracking-tight">Combo Offers</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-secondary/20 hover:border-brand-primary/40 transition-all group relative overflow-hidden flex flex-col h-full">
+                            <div class="absolute -top-10 -right-10 w-32 h-32 bg-brand-secondary/20 rounded-full mix-blend-multiply filter blur-2xl opacity-70 group-hover:scale-150 transition-transform duration-500"></div>
+                            <div class="flex justify-between items-start mb-6 relative z-10">
+                                <h4 class="font-extrabold text-2xl text-brand-primary pr-4 tracking-tight">Bridal Glow Combo</h4>
+                                <span class="bg-brand-primary text-brand-secondary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider shrink-0 shadow-sm">Best Seller</span>
+                            </div>
+                            <p class="text-slate-600 font-light mb-8 flex-1 relative z-10 leading-relaxed">Hydra Facial + Spa Manicure + Pedicure + Hair Spa</p>
+                            <div class="flex justify-between items-center relative z-10 pt-6 border-t border-brand-secondary/20 mt-auto">
+                                <span class="text-3xl font-bold text-brand-primary">₹6500</span>
+                                <span class="text-slate-400 line-through text-sm">₹8000</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-secondary/20 hover:border-brand-primary/40 transition-all group relative overflow-hidden flex flex-col h-full">
+                            <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-brand-accent/40 rounded-full mix-blend-multiply filter blur-2xl opacity-70 group-hover:scale-150 transition-transform duration-500"></div>
+                            <div class="flex justify-between items-start mb-6 relative z-10">
+                                <h4 class="font-extrabold text-2xl text-brand-primary tracking-tight">Hair Transformation</h4>
+                            </div>
+                            <p class="text-slate-600 font-light mb-8 flex-1 relative z-10 leading-relaxed">Smoothening + Hair Botox + Post-care Wash</p>
+                            <div class="flex justify-between items-center relative z-10 pt-6 border-t border-brand-secondary/20 mt-auto">
+                                <span class="text-3xl font-bold text-brand-primary">₹9999</span>
+                                <span class="text-brand-primary/60 text-xs font-bold uppercase tracking-widest">Value Pack</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    
+    
+    
+    
+    
+    
+    <!-- Footer -->
+    <footer class="bg-brand-primary text-brand-secondary py-16 mt-auto">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="assets/Logo.png" alt="VIOLET Logo" class="h-10 w-auto brightness-0 invert">
+                        <span class="text-2xl font-bold text-white tracking-tighter lowercase">violet</span>
+                    </div>
+                    <p class="text-brand-secondary/80 text-sm max-w-sm leading-relaxed mb-6">
+                        Kerala's premier family beauty lounge. Experience elegant, relaxation-focused treatments in a luxurious environment.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-10 h-10 rounded-full border border-brand-secondary/30 flex items-center justify-center hover:bg-brand-secondary hover:text-brand-primary transition-colors text-white">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-brand-secondary/30 flex items-center justify-center hover:bg-brand-secondary hover:text-brand-primary transition-colors text-white">
+                            <i data-lucide="facebook" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg tracking-tight">Quick Links</h4>
+                    <ul class="space-y-3 text-sm text-brand-secondary/80">
+                        <li><a href="services.html" class="hover:text-white transition-colors">Our Services</a></li>
+                        <li><a href="catalog.html" class="hover:text-white transition-colors">Pricing & Packages</a></li>
+                        <li><a href="about.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-6 text-lg tracking-tight">Contact</h4>
+                    <ul class="space-y-4 text-sm text-brand-secondary/80">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 shrink-0 text-brand-secondary"></i>
+                            <span>Michel Junction, Krishnapuram - Mavelikkara Rd, Kerala 690101</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 shrink-0 text-brand-secondary"></i>
+                            <span>098474 85975</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-brand-secondary/20 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-brand-secondary/60">
+                <p>&copy; 2026 VIOLET Family Beauty Lounge. All rights reserved.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+        const body = document.body;
+
+        function openMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                mobileMenuOverlay.classList.add('opacity-100');
+            }, 10);
+            body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.remove('opacity-100');
+            setTimeout(() => {
+                mobileMenuOverlay.classList.add('hidden');
+            }, 300);
+            body.style.overflow = '';
+        }
+        
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', openMenu);
+            closeMenuBtn.addEventListener('click', closeMenu);
+            mobileMenuOverlay.addEventListener('click', closeMenu);
+        }
+
+        // Active Link Detection
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                if (link.classList.contains('mobile-nav-link')) {
+                    link.classList.add('bg-brand-secondary/20', 'text-brand-primary');
+                } else {
+                    link.classList.add('text-brand-primary', 'font-bold');
+                }
+            }
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('py-3', 'shadow-md');
+                navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-3', 'shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
